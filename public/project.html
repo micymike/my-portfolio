@@ -4,82 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mike's Hub - Mini-Projects</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/x-icon" href="./my images/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <script src="./main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Add some animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .slide-up {
+      animation: slideUp 1s ease;
+    }
+  </style>
 </head>
-<body class="bg-orange-400"> 
-    <header class="bg-gray-900 border-b border-gray-700 p-6 text-white">
-        <div class="flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Mini-Projects</h1>
-            <div class="relative">
-              <button type="button" id="dropdownToggle" aria-label="Menu" class="flex items-center justify-center bg-gray-800 p-2 rounded-md hover:bg-gray-700 transition-colors duration-300">
-                <i class="fa-solid fa-bars"></i>
-              </button>
-              <nav id="dropdownMenu" class="hidden absolute top-14 right-0 bg-gray-800 rounded-md z-10 text-white p-2 transition-opacity duration-300">
-                <ul class="space-y-2">
-                  <li class="hover:bg-gray-700 p-2"><a href="home.html" class="block">Home</a></li>
-                  <li class="hover:bg-gray-700 p-2"><a href="about.html" class="block">About</a></li>
-                  <li class="hover:bg-gray-700 p-2"><a href="contact.html" class="block">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-        </div>
-    </header>
-
-    
-    <section class="container mx-auto py-8">
-      <figure class="flex justify-center">
-        <img src="../public/my images/coding.jpg" alt="Coding in session" class="w-72 h-72 rounded-full shadow-lg">
-      </figure>
-      <figcaption class="text-center text-gray-800 mt-4">Coding in session!</figcaption>
-
-      <div class="text-center mt-6 text-gray-700">
-        <p>
-          I enrolled in Directed's coding bootcamp two weeks ago. Since then, I've learned several programming languages:
-        </p>
-        <ul class="list-disc list-inside">
-          <li>HTML - HyperText Markup Language</li>
-          <li>CSS - Cascading Style Sheets</li>
-          <li>TailwindCSS</li>
+<body class="bg-orange-400">
+  <header class="bg-gray-800 text-white py-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">Mini-Projects</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="home.html" class="hover:text-gray-300 transition-colors duration-300">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-300 transition-colors duration-300">About</a></li>
+          <li><a href="contact.html" class="hover:text-gray-300 transition-colors duration-300">Contact</a></li>
         </ul>
-        <p>
-          As a result, I have built the following projects:
-        </p>
-      </div>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-   
-    <section class="container mx-auto py-10">
-      <h3 class="text-2xl font-bold text-center">Projects</h3>
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg-grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
-          <h4 class="text-xl font-semibold">Project 1: Taco Shop</h4>
-          <a href="https://github.com/micymike/first-html-project.git" class="text-blue-500 underline">View on GitHub</a>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
-          <h4 class="text-xl font-semibold">Project 2: Updated Taco Shop</h4>
-          <a href="https://github.com/micymike/taco-project.git" class="text-blue-500 underline">View on GitHub</a>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
-          <h4 class="text-xl font-semibold">Project 3: Mike's Rocket</h4>
-          <a href="https://github.com/micymike/Mike-s-rocket.git" class="text-blue-500 underline">View on GitHub</a>
-        </div>
-      </div>
-    </section>
+  <section class="container mx-auto py-8 fade-in">
+    <figure class="flex justify-center">
+      <img src="../public/my images/coding.jpg" alt="Coding in session" class="w-72 h-72 rounded-full shadow-lg">
+    </figure>
+    <figcaption class="text-center text-gray-800 mt-4">Coding in session!</figcaption>
 
-    <hr class="my-8 border-gray-600">
-
-    <footer class="bg-gray-800 text-white text-center py-6">
-      <ul class="flex justify-center gap-6">
-        <li><a href="https://www.instagram.com/" class="hover:text-gray-300 transition-colors duration-300"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-        <li><a href="https://wa.me/254703222614" class="hover:text-gray-300 transition-colors duration-300"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
-        <li><a href="https://twitter.com/" class="hover:text-gray-300 transition-colors duration-300"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+    <div class="text-center mt-6 text-gray-700">
+      <p class="mb-4">
+        I enrolled in Directed's coding bootcamp In Early January. Since then, I've learned several programming languages:
+      </p>
+      <ul class="list-disc list-inside">
+        <li>HTML - HyperText Markup Language</li>
+        <li>CSS - Cascading Style Sheets</li>
+        <li>TailwindCSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
       </ul>
-      <a href="#" class="text-blue-500 underline animate-bounce">Back to top</a>
-      <p>Mike &copy; 2024</p>
-    </footer>
-    <script src="./main.js"></script>
+      <p class="mt-4">
+        As a result, I have built the following projects:
+      </p>
+    </div>
+  </section>
+
+  <section class="container mx-auto py-10 slide-up">
+    <h3 class="text-2xl font-bold text-center mb-6">Projects</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h4 class="text-xl font-semibold mb-2">Project 1: Taco Shop</h4>
+        <a href="https://github.com/micymike/first-html-project.git" class="text-blue-500 underline">View on GitHub</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h4 class="text-xl font-semibold mb-2">Project 2: Updated Taco Shop</h4>
+        <a href="https://github.com/micymike/taco-project.git" class="text-blue-500 underline">View on GitHub</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h4 class="text-xl font-semibold mb-2">Project 3: Mike's Rocket</h4>
+        <a href="https://github.com/micymike/Mike-s-rocket.git" class="text-blue-500 underline">View on GitHub</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h4 class="text-xl font-semibold mb-2">Project 4: Health Bot</h4>
+        <a href="https://micymike-michaelmosesbot.hf.space" class="text-blue-500 underline">View on Huggingface</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl">
+        <h4 class="text-xl font-semibold mb-2">Project 5: Mike's Calculator</h4>
+        <a href="https://micymike-calculator-calc-ai0oa5.streamlit.app/" class="text-blue-500 underline">View on Streamlit</a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <ul class="flex justify-center gap-6">
+      <li><a href="https://www.instagram.com/" class="hover:text-gray-300 transition-all duration-300"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://wa.me/254703222614" class="hover:text-gray-300 transition-all duration-300"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+      <li><a href="https://twitter.com/" class="hover:text-gray-300 transition-all duration-300"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+    </ul>
+    <a href="#" class="text-blue-500 underline animate-bounce">Back to top</a>
+    <p>Mike &copy; 2024</p>
+  </footer>
+
+  <script>
+    // Add a smooth scroll effect to the "Back to top" link
+    const backToTopLink = document.querySelector('a[href="#"]');
+    backToTopLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
